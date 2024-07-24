@@ -1,0 +1,25 @@
+<app-nav-bar></app-nav-bar>
+<div class="Chart-Main">
+  <div class="chart-container" *ngIf="jsonData">
+    <div style="position: relative; height: 40vh; width: 80vw;">
+      <h2>Charts</h2>
+      <canvas #chartCanvas></canvas>
+      <div class="zoom-controls">
+        <button (click)="zoomIn()">Zoom In</button>
+        <button (click)="zoomOut()">Zoom Out</button>
+        <button (click)="resetZoom()">Reset Zoom</button>
+      </div>
+      <div class="parameter-controls">
+        <label>
+          <input type="checkbox" [(ngModel)]="showDO" (change)="toggleDataset('Dissolved Oxygen')"> Dissolved Oxygen
+        </label>
+        <label>
+          <input type="checkbox" [(ngModel)]="showPH" (change)="toggleDataset('pH')"> pH
+        </label>
+        <label>
+          <input type="checkbox" [(ngModel)]="showTemp" (change)="toggleDataset('Temperature')"> Temperature
+        </label>
+      </div>
+    </div>
+  </div>
+</div>

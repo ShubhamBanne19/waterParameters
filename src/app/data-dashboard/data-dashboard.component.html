@@ -1,0 +1,14 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+  <h2>CSV to JSON Converter</h2>
+  <input type="file" (change)="onFileChange($event)" />
+  <div *ngIf="jsonData">
+    <!-- <h3>JSON Output</h3>
+    <pre>{{ jsonData | json }}</pre> -->
+    <!-- Buttons to navigate to chart and table components -->
+    <button (click)="navigateToCharts()">Show Charts</button>
+    <button (click)="navigateToTables()">Show Tables</button>
+  </div>
+</div>
+
+  
